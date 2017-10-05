@@ -1,0 +1,3 @@
+gosyl_my_carbu_conso_homepage:
+    path:     /
+    defaults: { _controller: GosylMyCarbuConsoBundle:Default:index }
