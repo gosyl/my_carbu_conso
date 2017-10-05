@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2c11e12c5d7c6832c10f9c6182d759e",
+    "content-hash": "3e50a616624c5e8827e6cdb7c945be4a",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -935,6 +935,47 @@
                 "rest"
             ],
             "time": "2016-10-17T18:31:11+00:00"
+        },
+        {
+            "name": "gosyl/datatable_bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gosyl/datatable_bundle.git",
+                "reference": "2710782e28dbdb63ed570cfe687bfcc075aead24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gosyl/datatable_bundle/zipball/2710782e28dbdb63ed570cfe687bfcc075aead24",
+                "reference": "2710782e28dbdb63ed570cfe687bfcc075aead24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/assetic-bundle": "^2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Gosyl\\DataTableBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre LIPPMANN",
+                    "email": "alexandre.lippmann@free.fr",
+                    "role": "Developpeur WEB"
+                }
+            ],
+            "description": "Helper de vue pour la génération des dataTables",
+            "keywords": [
+                "symfony"
+            ],
+            "time": "2017-10-05T11:13:14+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2842,7 +2883,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "gosyl/datatable_bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
