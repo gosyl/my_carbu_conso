@@ -39,3 +39,6 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+symfony_debug_toolbar_git:
+    repository_commit_url: "https://github.com/gosyl/my_carbu_conso/commits"
