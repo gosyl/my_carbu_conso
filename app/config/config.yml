@@ -38,6 +38,9 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        project_name: "%project_name%"
+        pretty_project_name: "%pretty_protect_name%"
 
 # Doctrine Configuration
 doctrine:
@@ -76,4 +79,15 @@ assetic:
     filters:
         cssrewrite: ~
 
+gosyl_common:
+    menu_bundles: '%menu%'
 
+# log configuration
+monolog:
+    channels: [my_log]
+    handlers:
+        my_log:
+            type: rotating_file
+            path: "%kernel.root_dir%/../var/logs/myLog_%kernel.environment%.log"
+            formatter: gosyl_common.formater.my_log
+            date_format: 'Y-m-d'

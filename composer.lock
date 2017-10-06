@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e50a616624c5e8827e6cdb7c945be4a",
+    "content-hash": "3cc40a8aa2078130c91758b9ab40f497",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -937,17 +937,49 @@
             "time": "2016-10-17T18:31:11+00:00"
         },
         {
-            "name": "gosyl/datatable_bundle",
-            "version": "dev-master",
+            "name": "gosyl/common-bundle",
+            "version": "v2.5.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/gosyl/datatable_bundle.git",
-                "reference": "2710782e28dbdb63ed570cfe687bfcc075aead24"
+                "url": "https://github.com/gosyl/common-bundle.git",
+                "reference": "d0f0497eae63716839223827a106fc34fe5f7205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gosyl/datatable_bundle/zipball/2710782e28dbdb63ed570cfe687bfcc075aead24",
-                "reference": "2710782e28dbdb63ed570cfe687bfcc075aead24",
+                "url": "https://api.github.com/repos/gosyl/common-bundle/zipball/d0f0497eae63716839223827a106fc34fe5f7205",
+                "reference": "d0f0497eae63716839223827a106fc34fe5f7205",
+                "shasum": ""
+            },
+            "require": {
+                "gosyl/datatable_bundle": "1.*",
+                "php": ">=5.5.9",
+                "symfony/assetic-bundle": "^2.3"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Gosyl\\CommonBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bundle commun aux projets Gosyl",
+            "time": "2017-10-06T08:00:57+00:00"
+        },
+        {
+            "name": "gosyl/datatable_bundle",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gosyl/datatable_bundle.git",
+                "reference": "3675bb810c8b283357d5ffb916e03543b2b2db90"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gosyl/datatable_bundle/zipball/3675bb810c8b283357d5ffb916e03543b2b2db90",
+                "reference": "3675bb810c8b283357d5ffb916e03543b2b2db90",
                 "shasum": ""
             },
             "require": {
@@ -975,7 +1007,7 @@
             "keywords": [
                 "symfony"
             ],
-            "time": "2017-10-05T11:13:14+00:00"
+            "time": "2017-07-18T14:09:56+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2546,16 +2578,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.3.9",
+            "version": "v3.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "a9d2f68ae9946000e2bcc3403d218ec0124f992a"
+                "reference": "cfef3b2d505ae4375b17032bd03ed9a3da4b7b43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/a9d2f68ae9946000e2bcc3403d218ec0124f992a",
-                "reference": "a9d2f68ae9946000e2bcc3403d218ec0124f992a",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/cfef3b2d505ae4375b17032bd03ed9a3da4b7b43",
+                "reference": "cfef3b2d505ae4375b17032bd03ed9a3da4b7b43",
                 "shasum": ""
             },
             "require": {
@@ -2695,7 +2727,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-09-11T16:13:42+00:00"
+            "time": "2017-10-05T23:40:32+00:00"
         },
         {
             "name": "twig/twig",
@@ -2820,16 +2852,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v3.3.9",
+            "version": "v3.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "27d159bd9bd14a3bd9d3e136081c321a0d621c03"
+                "reference": "6e40d1c8bc4037edf3852c0b29fdd2923c4e2133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/27d159bd9bd14a3bd9d3e136081c321a0d621c03",
-                "reference": "27d159bd9bd14a3bd9d3e136081c321a0d621c03",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/6e40d1c8bc4037edf3852c0b29fdd2923c4e2133",
+                "reference": "6e40d1c8bc4037edf3852c0b29fdd2923c4e2133",
                 "shasum": ""
             },
             "require": {
@@ -2878,14 +2910,12 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-09-05T11:23:06+00:00"
+            "time": "2017-10-02T06:54:00+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gosyl/datatable_bundle": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
