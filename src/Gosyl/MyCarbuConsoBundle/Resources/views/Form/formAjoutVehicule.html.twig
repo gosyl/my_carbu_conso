@@ -1,0 +1,86 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% set bAction = form.vars.value.action is defined %}
+<form method="{{ form.vars.method }}" action="{{ bAction ? form.vars.value.action : form.vars.action }}" id="{{ form.vars.id }}" name="{{ form.vars.id }}" class="{{ form.vars.formClass is defined ? form.vars.formClass : '' }}">
+    <div class="row">
+        <div class="col-xs-6">
+            {{ form_row(form.children.nomVehicule) }}
+            {{ form_row(form.children.idModeleUser) }}
+        </div>
+        <div class="col-lg-3">
+            {{ form_row(form.children.anneeMiseEnCirculation) }}
+        </div>
+        <div class="col-lg-3">
+            {{ form_row(form.children.kilometrageInit) }}
+        </div>
+    </div>
+    <div id="frmRecherche">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Recherche du véhicule</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><span style="font-size: 16px;">Par modèle</span></div>
+                {{ form_row(form.children.modele) }}
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    {{ form_row(form.children.marque) }}{{ form_row(form.children.hiddenIdMarque) }}
+                </div>
+                <div class="col-lg-3">
+                    {{ form_row(form.children.nomCommercial) }}
+                </div>
+                <div class="col-lg-3">
+                    {{ form_row(form.children.energie) }}
+                </div>
+                <div class="col-lg-3">
+                    {{ form_row(form.children.boiteVitesse) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    {{ form_row(form.children.carrosserie) }}
+                </div>
+                <div class="col-lg-3">
+                    {{ form_row(form.children.puissanceFiscale) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><span style="font-size: 16px;">Par type mine</span></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    {{ form_row(form.children.typeMine) }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    {{ form_row(form.children.btnNewRecherche) }}
+                </div>
+                <div class="col-xs-2">
+                    {{ form_row(form.children.btnRechercheVehicule) }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resultRech" class="container-fluid">
+        <div class="row">
+            <table id="resultRechAjoutVl" class="table table-striped table-bordered dataTable no-footer dt-responsive dtr-inline">
+                <thead>
+                <tr>
+                    <td>Nom commercial</td>
+                    <td>Modèle</td>
+                    <td>Année du modèle</td>
+                    <td>Type mine</td>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="row">
+            {{ form_row(form.children.btnModifRecherche) }}
+        </div>
+    </div>
+    {{ form_rest(form) }}
+</form>

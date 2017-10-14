@@ -2,3 +2,48 @@ services:
 #    gosyl_my_carbu_conso.example:
 #        class: Gosyl\MyCarbuConsoBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    # Services
+    gosyl.my_carbu_conso.services.gestion_bdd_vl:
+        class: Gosyl\MyCarbuConsoBundle\Service\GestionBddVl
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    gosyl.mcc.services.autocomplete:
+        class: Gosyl\MyCarbuConsoBundle\Service\AutoComplete
+        arguments: ["@doctrine.orm.entity_manager"]
+
+    gosyl.mcc.service.consommations:
+        class: Gosyl\MyCarbuConsoBundle\Service\Consommations
+        arguments: ["@doctrine.orm.entity_manager", "@security.token_storage"]
+
+    # Twig_extensions
+#    twig.extension.menu:
+#        class: Gosyl\MyCarbuConsoBundle\Twig\Menu
+#        public: false
+#        arguments: ['@service_container','@router', '@security.authorization_checker']
+#        tags:
+#            - { name: twig.extension }
+
+    #forms
+    gosyl_mcc_forms.ajout_vehicule:
+        class: Gosyl\MyCarbuConsoBundle\Form\AjoutVehiculeType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: gosyl_mcc.form.ajout_vehicule }
+
+    gosyl_mcc_forms.ajout_consommation:
+        class: Gosyl\MyCarbuConsoBundle\Form\AjoutConsommationType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: gosyl_mcc.form.ajout_conso }
+
+    gosyl_mcc_forms.choix_date:
+        class: Gosyl\MyCarbuConsoBundle\Form\ChoixDateType
+        tags:
+            - { name: form.type, alias: gosyl_mcc_form.choix_ajout }
+
+    #data tranformers
+    gosyl_mcc_tranformers.modele:
+        class: Gosyl\MyCarbuConsoBundle\Form\Transformers\ModeleTransformer
+        arguments: ["@doctrine.orm.entity_manager"]
+

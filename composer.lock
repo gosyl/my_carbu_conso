@@ -415,16 +415,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "1.6.11",
+            "version": "1.6.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "829499731395e1ecdf0e3f5cca3119f94f79c8e6"
+                "reference": "8cd4c2921b6cef14a78d98cd3f0fb81ba6a976f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/829499731395e1ecdf0e3f5cca3119f94f79c8e6",
-                "reference": "829499731395e1ecdf0e3f5cca3119f94f79c8e6",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/8cd4c2921b6cef14a78d98cd3f0fb81ba6a976f9",
+                "reference": "8cd4c2921b6cef14a78d98cd3f0fb81ba6a976f9",
                 "shasum": ""
             },
             "require": {
@@ -492,20 +492,20 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2017-10-04T22:58:25+00:00"
+            "time": "2017-10-11T19:48:03+00:00"
         },
         {
             "name": "doctrine/doctrine-cache-bundle",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
-                "reference": "cfc629363a4a1d7b3f21c4689c53aa05519eed52"
+                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/cfc629363a4a1d7b3f21c4689c53aa05519eed52",
-                "reference": "cfc629363a4a1d7b3f21c4689c53aa05519eed52",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
+                "reference": "9baecbd6bfdd1123b0cf8c1b88fee0170a84ddd1",
                 "shasum": ""
             },
             "require": {
@@ -580,7 +580,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2017-09-29T14:39:10+00:00"
+            "time": "2017-10-12T17:23:29+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -938,16 +938,16 @@
         },
         {
             "name": "gosyl/common-bundle",
-            "version": "v2.5.2",
+            "version": "v2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gosyl/common-bundle.git",
-                "reference": "d0f0497eae63716839223827a106fc34fe5f7205"
+                "reference": "0f4d6281131bf5d9d036a751a36ca690778f63e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gosyl/common-bundle/zipball/d0f0497eae63716839223827a106fc34fe5f7205",
-                "reference": "d0f0497eae63716839223827a106fc34fe5f7205",
+                "url": "https://api.github.com/repos/gosyl/common-bundle/zipball/0f4d6281131bf5d9d036a751a36ca690778f63e1",
+                "reference": "0f4d6281131bf5d9d036a751a36ca690778f63e1",
                 "shasum": ""
             },
             "require": {
@@ -966,20 +966,20 @@
                 "MIT"
             ],
             "description": "Bundle commun aux projets Gosyl",
-            "time": "2017-10-06T08:00:57+00:00"
+            "time": "2017-10-10T13:41:49+00:00"
         },
         {
             "name": "gosyl/datatable_bundle",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gosyl/datatable_bundle.git",
-                "reference": "3675bb810c8b283357d5ffb916e03543b2b2db90"
+                "reference": "7659615de668ff720e7f742ff07c07b908303f94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gosyl/datatable_bundle/zipball/3675bb810c8b283357d5ffb916e03543b2b2db90",
-                "reference": "3675bb810c8b283357d5ffb916e03543b2b2db90",
+                "url": "https://api.github.com/repos/gosyl/datatable_bundle/zipball/7659615de668ff720e7f742ff07c07b908303f94",
+                "reference": "7659615de668ff720e7f742ff07c07b908303f94",
                 "shasum": ""
             },
             "require": {
@@ -1007,7 +1007,7 @@
             "keywords": [
                 "symfony"
             ],
-            "time": "2017-07-18T14:09:56+00:00"
+            "time": "2017-10-06T08:13:32+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1883,21 +1883,21 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.27",
+            "version": "v3.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a"
+                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
-                "reference": "2651d2c70c5fec10beaa670c61fd8ff1e8b3869a",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/65eadf9e3fd5c47eee7986b306a5aed8affe6496",
+                "reference": "65eadf9e3fd5c47eee7986b306a5aed8affe6496",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.2",
-                "symfony/dependency-injection": "~2.3|~3.0|~4.0",
+                "symfony/dependency-injection": "~2.3|~3.0",
                 "symfony/framework-bundle": "~2.3|~3.0|~4.0"
             },
             "require-dev": {
@@ -1949,7 +1949,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-08-23T12:40:59+00:00"
+            "time": "2017-10-12T17:37:20+00:00"
         },
         {
             "name": "sensiolabs/security-checker",

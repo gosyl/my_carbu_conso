@@ -4,6 +4,8 @@
     {{ parent() }}
 {% endblock %}
 
+
+
 {% block javascripts %}
     {{ parent() }}
     <script type="text/javascript">
@@ -22,13 +24,13 @@
 {% block content %}
     {{ parent() }}
     {% set aModalErreurOptions = {
-        options: {
-            js: {
-                backdrop: 'static',
-                show: false,
-                keyboard: false
-            },
-            id: 'modalErreur'
+    options: {
+        js: {
+            backdrop: 'static',
+            show: false,
+            keyboard: false
+        },
+        id: 'modalErreur'
         }
     }
     %}

@@ -1,3 +1,78 @@
+#gosyl_mcc_homepage:
 gosyl_homepage:
     path:     /
-    defaults: { _controller: GosylMyCarbuConsoBundle:Default:index }
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Default:index
+
+gosyl_mcc_default_stat:
+    path: /stat/{id}
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Default:stat
+    requirements:
+        id: '\d+'
+
+gosyl_gestion_base_vehicule_index:
+    path: /gestionbasevehicule
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:GestionBaseVehicule:index
+
+gosyl_gestion_base_vehicule_refresh:
+    path: /gestionbasevehicule/refresh
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:GestionBaseVehicule:refresh
+
+gosyl_common_profilutilisateur:
+    path: /common/utilisateurs/profil
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Utilisateurs:profil
+
+gosyl_mcc_gestion_base_vehicule_suppr_vl:
+    path: /gestionbasevehicule/supprvl/{id}
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Utilisateurs:suppressionvl
+    requirements:
+        id: '\d+'
+
+# Ajax Ctrl
+
+gosyl_mcc_ajax_getmarque:
+    path: /ajax/getmarque
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:marque
+
+gosyl_mcc_ajax_getnomcommercial:
+    path: /ajax/getnomcommercial
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:nomsCommerciaux
+
+gosyl_mcc_ajax_getenergie:
+    path: /ajax/getenergie
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:energie
+
+gosyl_mcc_ajax_getboitevitesse:
+    path: /ajax/getboitevitesse
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:boiteVitesse
+
+gosyl_mcc_ajax_getcarrosserie:
+    path: /ajax/getcarrosserie
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:carrosserie
+
+gosyl_mcc_ajax_getpuissancefiscale:
+    path: /ajax/getpuissancefiscale
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:puissanceFiscale
+
+gosyl_mcc_ajax_getmodele:
+    path: /ajax/getmodeles
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:modeles
+
+gosyl_mcc_ajax_deleteconso:
+    path: /ajax/deleteconso/{id}
+    defaults:
+        _controller: GosylMyCarbuConsoBundle:Ajax:deleteconso
+    requirements:
+        id: '\d+'
