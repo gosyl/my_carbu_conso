@@ -1,3 +1,9 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+gosyl_my_carbu_conso:
+    resource: "@GosylMyCarbuConsoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+gosyl_common:
+    resource: "@GosylCommonBundle/Controller/"
+    type:     annotation
+    prefix:   /common
+

@@ -1,0 +1,104 @@
+{% extends 'GosylCommonBundle:Utilisateurs:profil.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{#
+
+ #}
+    {% javascripts
+        'bundles/gosylmycarbuconso/js/projet/Utilisateurs/index.js'
+    %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets 'bundles/gosylmycarbuconso/css/projet/utilisateurs/profil.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-offset-2 col-lg-8" id="divVehicules">
+                {% set content %}
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{ datatable(vehicules) }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button id="btnAddVehicule" class="btn btn-default"><i class="fa fa-plus-circle"></i> Ajouter un véhicule</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                {% endset %}
+                {% set aPanelVehiculesOptions = {
+                    typePanel: constant("Gosyl\\CommonBundle\\Constantes::PANEL_PRIMARY"),
+                    showHeader: true,
+                    title: 'Mes véhicules',
+                    contenu: content,
+                    showFooter: false
+                } %}
+                {{ include('GosylCommonBundle::message.html.twig', aPanelVehiculesOptions) }}
+            </div>
+        </div>
+    </div>
+    {# Popup du formulaire #}
+    {% set aFormAjoutVehiculeOptions = {
+        options: {
+            js: {
+                backdrop: 'static',
+                show: false,
+                keyboard: false
+            },
+            class: {
+                'modal-dialog': ['modal-lg']
+            },
+        id: 'modalAjoutVehicule'
+        }
+    } %}
+
+    {{ modal('Ajouter un véhicule', include('@GosylMyCarbuConso/Form/formAjoutVehicule.html.twig', {form: formAjoutVehicule}), aFormAjoutVehiculeOptions) }}
+
+    {% set aModalSuppressionVehicule = {
+        footer: {
+            text: {},
+            buttons: {
+                0: {
+                    id: 'btnLaunchSupprVl',
+                    class: 'btn btn-danger',
+                    forClose: false,
+                    label: 'Oui'
+                },
+                1: {
+                    id: 'btnCancelSupprVl',
+                    class: 'btn btn-default',
+                    forClose: true,
+                    label: 'non'
+                }
+            }
+        },
+        options: {
+            js: {
+                backdrop: 'static',
+                show: false,
+                keyboard: false
+            },
+            id: 'modalSuppressionVehicule'
+        }
+    } %}
+
+    {% set contenuSuppressionVehicule %}
+        Êtes-vous sur de vouloir supprimer ce véhicule "<span id="spanNomVehicule"></span>" ?
+    {% endset %}
+
+    {{ modal("Suppression d'un véhicule", contenuSuppressionVehicule, aModalSuppressionVehicule) }}
+{% endblock %}

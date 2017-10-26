@@ -1,20 +1,52 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        Gosyl\CommonBundle\Entity\ParamUsers:
+            algorithm: md5
+            iterations: 0
+            encode_as_base64: false
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        my_provider:
+            entity:
+                class: GosylCommonBundle:ParamUsers
+                property: username
+#        in_memory:
+#            memory: ~
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
-        main:
+        login:
+            pattern: ^/common/login$
             anonymous: ~
+        main:
+            pattern: ^/
+            anonymous: ~
+            user_checker: app.user_checker
+
+            form_login:
+                login_path: /common/login
+                check_path: login_check
+
+            provider: my_provider
+
+            logout:
+                path: logout
+                target: /
+
+            remember_me:
+                secret: "%secret%"
+                lifetime: 86400
+                path: /
+
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -22,3 +54,10 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+    access_control:
+        - { path: ^/common/register, role: IS_AUTHENTICATED_ANONYMOUSLY  }
+        - { path: ^/common/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: ROLE_USER }
+        - { path: ^/common/utilisateurs, role: ROLE_ADMIN }
+        - { path: ^/configuration, role: ROLE_ADMIN }
+        - { path: ^/ajax, role: ROLE_USER }

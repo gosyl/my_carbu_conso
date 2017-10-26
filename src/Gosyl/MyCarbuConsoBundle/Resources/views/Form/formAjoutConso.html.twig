@@ -1,0 +1,41 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% set bAction = form.vars.value.action is defined %}
+<form method="{{ form.vars.method }}" action="{{ bAction ? form.vars.value.action : form.vars.action }}" id="{{ form.vars.id }}" name="{{ form.vars.id }}" class="{{ form.vars.formClass is defined ? form.vars.formClass : '' }}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form_row(form.children.quantite) }}
+            </div>
+            <div class="col-lg-6">
+                {{ form_row(form.children.prix) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form_row(form.children.distance) }}
+            </div>
+            <div class="col-lg-6">
+                {{ form_row(form.children.datePlein) }}
+            </div>
+            <div class="col-lg-6">
+                {{ form_row(form.children.kilometrageCompteur) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                {{ form_row(form.children.adresse) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <span>
+                    {{ form_widget(form.children.btnValider) }}
+                </span>
+                <span>
+                    {{ form_widget(form.children.btnCancelAjoutConso) }}
+                </span>
+            </div>
+        </div>
+    </div>
+    {{ form_rest(form) }}
+</form>

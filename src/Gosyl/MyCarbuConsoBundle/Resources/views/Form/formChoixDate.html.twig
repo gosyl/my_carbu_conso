@@ -1,0 +1,21 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+{% set bAction = form.vars.value.action is defined %}
+<form method="{{ form.vars.method }}" action="{{ bAction ? form.vars.value.action : form.vars.action }}" id="{{ form.vars.id }}" name="{{ form.vars.id }}" class="{{ form.vars.formClass is defined ? form.vars.formClass : '' }}">
+    <ul id="lstFormChoixDate">
+        <li>
+            {{- form_label(form.children.dateDebut) -}}
+            {{- form_widget(form.children.dateDebut) -}}
+        </li>
+        <li>
+            {{- form_label(form.children.dateFin) -}}
+            {{- form_widget(form.children.dateFin) -}}
+        </li>
+        <li>
+            {{- form_widget(form.children.btnValiderChoixDate) -}}
+        </li>
+        <li>
+            {{- form_widget(form.children.btnRAZDate) -}}
+        </li>
+    </ul>
+    {{ form_rest(form) }}
+</form>

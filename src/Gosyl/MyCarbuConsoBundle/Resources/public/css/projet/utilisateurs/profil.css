@@ -1,0 +1,9 @@
+#resultRech {
+    display: none;
+    height: 453px;
+    overflow: auto;
+}
+
+#resultRechAjoutVl_wrapper .row {
+    margin-right: 0;
+}

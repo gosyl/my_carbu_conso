@@ -1,0 +1,48 @@
+ul.nav-tabs > li:not(.active) > a {
+    background-color: #ccc;
+}
+
+div.tab-pane > div.container-fluid {
+    margin-top: 1em;
+}
+
+.tooltip > .tooltip-inner {
+    background-color: #337ab7;
+    color: white;
+    border: 1px solid black;
+}
+
+.tooltip {
+    opacity: 1;
+    z-index: 10000;
+}
+
+#proxyToolTip {
+    position: absolute;
+}
+
+#lstFormChoixDate {
+    padding: 0;
+}
+
+#lstFormChoixDate li {
+    display: inline-block;
+}
+
+/* Style pour les graph */
+/* Style the lines by removing the fill and applying a stroke */
+.line {
+    fill: none;
+    stroke: #ffab00;
+    stroke-width: 3;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    fill: #ffab00;
+    stroke: #fff;
+}
+
+#divMaps {
+    height: calc(100vh - 200px);
+}

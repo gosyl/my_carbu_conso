@@ -1,0 +1,28 @@
+{% extends 'GosylMyCarbuConsoBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts 'bundles/gosylmycarbuconso/js/projet/gestionBaseVehicule/index.js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Statistiques</div>
+                <ul class="list-group">
+                    <li class="list-group-item">Nombre de marques : {{ nbElements.nbMarques }}</li>
+                    <li class="list-group-item">Nombre de modèles : {{ nbElements.nbModeles }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12" id="arbreMarques"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12"><button type="button" id="btnRefresh" class="btn btn-default">Actualiser la base</button></div>
+    </div>
+{% endblock %}

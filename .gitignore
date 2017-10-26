@@ -22,3 +22,9 @@
 /.idea/
 /web/data/*
 !/web/data/
+/web/css/*
+!/web/css
+/web/js/*
+!/web/js
+/web/images/*
+!/web/images

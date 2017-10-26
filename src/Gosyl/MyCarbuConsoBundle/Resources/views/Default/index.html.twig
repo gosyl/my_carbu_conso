@@ -1,0 +1,69 @@
+{% extends 'GosylMyCarbuConsoBundle::layout.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+        'bundles/gosyldatatable/js/library/Datatables/datatables.min.js'
+        'bundles/gosyldatatable/js/library/Datatables/dataTables.bootstrap.js'
+        'bundles/gosyldatatable/js/library/Datatables/Responsive-2.1.0/js/dataTables.responsive.min.js'
+        'bundles/gosyldatatable/js/library/Datatables/Responsive-2.1.0/js/responsive.bootstrap.min.js'
+        'bundles/gosylmycarbuconso/js/projet/default/index.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets
+        'bundles/gosyldatatable/js/library/Datatables/dataTables.bootstrap.css'
+        'bundles/gosyldatatable/js/library/Datatables/Responsive-2.1.0/css/responsive.bootstrap.min.css'
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block title %}
+    {{ parent() }}
+    Accueil
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-offset-2 col-lg-8" id="divVehicules">
+                {% set content %}
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{ datatable(vehicules) }}
+                            </div>
+                        </div>
+                    </div>
+                {% endset %}
+                {% set aPanelVehiculesOptions = {
+                    typePanel: constant("Gosyl\\CommonBundle\\Constantes::PANEL_PRIMARY"),
+                    showHeader: true,
+                    title: 'Mes véhicules',
+                    contenu: content,
+                    showFooter: false
+                } %}
+                {{ include('GosylCommonBundle::message.html.twig', aPanelVehiculesOptions) }}
+            </div>
+        </div>
+    </div>
+    {# Popup du formulaire #}
+    {% set aFormAjoutConsoOptions = {
+        options: {
+            js: {
+                backdrop: 'static',
+                show: false,
+                keyboard: false
+            },
+
+            id: 'modalAjoutConso'
+        }
+    } %}
+
+    {{ modal('Ajouter une consommation', include('@GosylMyCarbuConso/Form/formAjoutConso.html.twig', {form: formAjoutConso}), aFormAjoutConsoOptions) }}
+{% endblock %}
