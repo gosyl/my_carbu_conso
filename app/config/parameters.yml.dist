@@ -7,7 +7,7 @@ parameters:
     database_port: 5432
     database_name: myCarbuConso
     database_user: fileserver
-    database_password: 4snvzdin
+    database_password: ********
     # You should uncomment this if you want to use pdo_sqlite
     # database_path: '%kernel.project_dir%/src/Gosyl/MyCarbuConsoBundle/database/sqlite.db'
 
