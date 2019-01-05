@@ -28,3 +28,5 @@
 !/web/js
 /web/images/*
 !/web/images
+/sslVerify/
+/sslVerify/*
